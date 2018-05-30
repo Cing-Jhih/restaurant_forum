@@ -1,6 +1,6 @@
 <h1>餐廳後台</h1>
 <ul>
-  <% @restaurant.each do |restaurant| %>
+  <% @restaurants.each do |restaurant| %>
   <li>
     restaurant.name
     <%= link_to 'Show', admin_restaurant_path(restaurant) %>
