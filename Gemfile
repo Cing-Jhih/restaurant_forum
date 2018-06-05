@@ -9,8 +9,7 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
-# Use Puma as the app server
+
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
@@ -43,9 +42,7 @@ gem 'bootstrap-sass', '~> 3.3.7'
 
 gem'jquery-rails'
 
-group :production do
-  gem 'pg', '~> 0.20'
-end
+gem'rollbar'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -54,6 +51,10 @@ group :development, :test do
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   gem 'sqlite3'
+end
+
+group :production do
+  gem 'pg', '~> 0.20'
 end
 
 group :development do
