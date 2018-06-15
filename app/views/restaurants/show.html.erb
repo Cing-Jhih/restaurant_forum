@@ -28,19 +28,25 @@
 </div>
 
 <!-- 顯示與餐廳相關的評論 -->
-<% @restaurant.comments.each do |comment| %>
-  <div>
-    <h4><%= comment.user.email.split("@").at(0) %></h4>
-    <p><%= simple_format comment.content %></p>
-    <p class="text-muted">
-      <em><%= time_ago_in_words(comment.created_at)%> ago</em>
-      <% if current_user.admin? || current_user == comment.user %>
-        <%= link_to "Delete", restaurant_comment_path(@restaurant, comment), method:"delete" %>
-      <% end %>
-    </p>
-  </div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <% @restaurant.comments.each do |comment| %>
+      <div>
+        <h4><%= comment.user.email.split("@").at(0) %></h4>
+        <p><%= simple_format comment.content %></p>
+        <p class="text-muted">
+          <em><%= time_ago_in_words(comment.created_at)%> ago</em>
+            <% if current_user.admin? || current_user == comment.user %>
+              <%= link_to "Delete", restaurant_comment_path(@restaurant, comment), method:"delete" %>
+            <% end %>
+        </p>
+      </div>
   <hr>
-<% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
 
 
 <div class="container">
