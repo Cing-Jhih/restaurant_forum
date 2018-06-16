@@ -23,6 +23,16 @@
 
       <br>
 
+      <div class="comented-rstaurants">
+        <div class="col-md-12">
+          <% @commented_restaurants.each do |restaurant| %>
+          <div>
+            <p><%= restaurant.name %></p>
+          </div>
+          <% end %>
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
