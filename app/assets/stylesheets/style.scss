@@ -22,3 +22,23 @@
 .restaurant-item .caption{
   padding: 10px;
 }
+
+
+.my-restaurant{
+  display:inline-block;
+  text-align: center;
+  padding: 7px 7px 0 7px;
+}
+
+.my-restaurant > div{
+  height: 40px;
+  width: 40px;
+}
+
+.my-restaurant img{
+  max-height: 100%;
+}
+
+.panel a:hover .my-restaurant {
+  background-color: #eee;
+}
