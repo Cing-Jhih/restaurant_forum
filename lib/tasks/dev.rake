@@ -42,5 +42,4 @@ namespace :dev do
   puts "have created fake comment!"
   puts "now you have #{Comment.count} comment data!"
   end
-
 end
