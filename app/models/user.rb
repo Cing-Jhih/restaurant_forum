@@ -21,7 +21,7 @@ class User < ApplicationRecord
   # 「使用者追蹤使用者」的 self-referential relationships 設定
   # 不需要另加 source，Rails 可從 Followship Model 設定來判斷 followings 指向 User Model
   has_many :followships, dependent: :destroy
-  has_many :followings, through: :followships, source: :user
+  has_many :followings, through: :followships
 
 
   def admin?
